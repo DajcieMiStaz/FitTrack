@@ -1,0 +1,16 @@
+{
+  "name": "fittracker",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ],
+  "scripts": {
+    "dev:frontend": "npm --workspace services/frontend run dev",
+    "build:frontend": "npm --workspace services/frontend run build",
+    "start:frontend": "npm --workspace services/frontend run preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

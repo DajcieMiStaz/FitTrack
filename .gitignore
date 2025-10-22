@@ -1,0 +1,11 @@
+# Node.js dependencies
+node_modules/
+
+# Vite / frontend build
+dist/
+
+# IDE / edytory
+.vscode/
+
+# Środowisko
+.env
