@@ -8,12 +8,12 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import PersonIcon from '@mui/icons-material/Person';
 
-export default function SimpleBottomNavigation() {
+export default function BottomNavBar() {
   const [value, setValue] = React.useState(0);
 
   return (
     <Box sx={{ width: "100%" , height: "100%"}}>
-      <BottomNavigation sx={{height: "100%", display: "flex", flexDirection: "row", justifyContent: "space-around"}}
+      <BottomNavigation sx={{height: "100%", display: "flex", flexDirection: "row", justifyContent: "space-around" }}
         showLabels
         value={value}
         onChange={(event, newValue) => {

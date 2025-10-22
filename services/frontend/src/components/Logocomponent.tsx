@@ -5,7 +5,7 @@ import { deepOrange, green } from "@mui/material/colors";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import { colors, Typography } from "@mui/material";
 
-export default function Logo() {
+export default function LogoComponent() {
   return (
     <Stack
       direction="row"

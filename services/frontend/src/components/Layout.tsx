@@ -2,6 +2,12 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Logo from "./Logocomponent";
 import BottomNavBar from "./BottomNavBar";
+import LeftNavBarButton from "./LeftNavBarButton";
+import HomeIcon from '@mui/icons-material/Home';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import PersonIcon from '@mui/icons-material/Person';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -25,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Logo />
       </Box>
       <Box
-        id="mainpanel"
+        id="mainPanel"
         sx={{
           display: "flex",
           flexDirection: "row",
@@ -34,23 +40,35 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         }}
       >
         <Box
+          id="leftNavBar"
           sx={{
             width: "300px",
             display: {
               xs: "none",
-              md: "block",
-              backgroundColor: "black",
-              height: "100%",
+              md: "flex",
             },
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            gap: "20px",
+            marginTop: "20px",         
           }}
-        ></Box>
-        <Box sx={{ height: "100%", width: "100%" }}>
-          <Box sx={{ backgroundColor: "green", height: "100%", width: "100%" }}>
-            {children}
-          </Box>
+        >
+          {LeftNavBarButton(<HomeIcon />, "Home")}
+          {LeftNavBarButton(<RestaurantIcon />, "Calories")}
+          {LeftNavBarButton(<FitnessCenterIcon />, "Exercises")}
+          {LeftNavBarButton(<BarChartIcon />, "Statistics")}
+          {LeftNavBarButton(<PersonIcon />, "Account")}
+        </Box>
+        <Box
+          id="contentPanel"
+          sx={{ backgroundColor: "green", height: "100%", width: "100%" }}
+        >
+          {children}
         </Box>
       </Box>
       <Box
+        id="bottomNavBar"
         sx={{
           backgroundColor: "blue",
           height: "10%",
