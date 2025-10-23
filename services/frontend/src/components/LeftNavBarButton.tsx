@@ -2,13 +2,21 @@
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import type React from 'react';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-export default function LeftNavBarButton( icon: React.ReactNode , label: string) {
+type Props = {
+    icon: React.ReactNode;
+    label: string;
+    isActive: boolean;
+    onClick?: () => void;
+};
 
+export default function LeftNavBarButton({ icon, label, isActive, onClick }: Props) {
 
   return (
     <Stack direction="row" spacing={2}>
-      <Button variant="contained" startIcon={icon} color='primary' sx={{ width: "200px" , justifyContent: "flex-start" ,"&:hover": { bgcolor: '#3DDC97', color: 'black' }}}>
+      <Button onClick={onClick} startIcon={icon} sx={{ textTransform: "none", fontSize: "15px", color: isActive? "background.default" : "text.primary" , backgroundColor: isActive? "primary.main": "background.main", width: "200px", justifyContent: "flex-start", "&:hover": { bgcolor: 'secondary.main' } ,"&:active": { bgcolor: 'primary.main' },}}>
         {label}
       </Button>
     </Stack>

@@ -1,16 +1,22 @@
 import "./App.css";
 import Box from "@mui/material/Box";
 import Layout from "./components/Layout";
-import Typography from "@mui/material/Typography";
+import { ThemeProviderWrapper } from "./theme/ThemeProviderWrapper";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function App() {
   return (
     <>
-      <Layout>
-        <Box>
-          <Typography variant="h1">Typography Example</Typography>
-        </Box>
-      </Layout>
+      <ThemeProviderWrapper>
+        <Layout>
+          <Box>
+            
+          </Box>
+        </Layout>
+      </ThemeProviderWrapper>
     </>
   );
 }

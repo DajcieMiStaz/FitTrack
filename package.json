@@ -12,5 +12,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/roboto": "^5.2.8",
+    "react-router-dom": "^7.9.4"
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3"
+  }
 }
