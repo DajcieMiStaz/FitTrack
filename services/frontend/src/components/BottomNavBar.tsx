@@ -16,7 +16,7 @@ export default function SimpleBottomNavigation() {
       <BottomNavigation sx={{height: "100%", display: "flex", flexDirection: "row", justifyContent: "space-around"}}
         showLabels
         value={value}
-        onChange={(event, newValue) => {
+        onChange={(_event, newValue) => {
           setValue(newValue);
         }}
       >
