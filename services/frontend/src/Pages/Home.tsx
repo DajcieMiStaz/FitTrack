@@ -3,8 +3,8 @@ import { Typography } from "@mui/material";
 
 export default function Home() {
   return (
-    <Box id="main" sx={{ display: "flex", flexDirection: "column" }}>
-      <Box id="header" sx={{ height: "150px" }}>
+    <>
+      <Box id="header" sx={{ height: "150px", width: "100%" }}>
         <Box
           sx={{
             display: "flex",
@@ -13,13 +13,16 @@ export default function Home() {
             justifyContent: "center",
             height: "100%",
             width: "100%",
-            paddingLeft: "70px",
           }}
         >
           <Typography
-            sx={{ color: "text-primary", fontSize: "24px", fontWeight: "bold" }}
+            sx={{
+              color: "text-primary",
+              fontSize: "24px",
+              fontWeight: "bold",
+            }}
           >
-            Welcome Back!
+            Welcome User!
           </Typography>
           <Typography sx={{ color: "tertiary.main" }}>
             Track your fitness journey
@@ -30,15 +33,13 @@ export default function Home() {
         <Box
           sx={{
             height: "100%",
-            marginInline: "40px",
             border: "1px solid",
             borderRadius: "8px",
             borderColor: "divider",
           }}
         ></Box>
       </Box>
-
       <Box sx={{ backgroundColor: "yellow" }}></Box>
-    </Box>
+    </>
   );
 }
