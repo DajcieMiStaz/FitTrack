@@ -31,6 +31,8 @@ export default function Layout({children}: { children: React.ReactNode }) {
                     borderColor: "divider",
                     width: "100%",
                     height: "10%",
+                    display: "flex",
+                    justifyContent: "space-between",        
                 }}
             >
                 <Box
