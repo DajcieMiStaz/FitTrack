@@ -29,7 +29,7 @@ export default function AccountButton({ name }: Props) {
     <Box
       sx={{
         alignItems: "center",
-        display: { xs: "none", md: "flex"},
+        display: { xs: "none", md: "flex"}
       }}
     >
       <Tooltip title="Open settings">
@@ -40,6 +40,8 @@ export default function AccountButton({ name }: Props) {
               width: "180px",
               borderRadius: 0,
               backgroundColor: "background.paper",
+                // border: "1px solid black",
+                // borderRadius: "10px",
             }}
           >
             <Box

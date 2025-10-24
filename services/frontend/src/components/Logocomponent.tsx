@@ -1,4 +1,3 @@
-
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";

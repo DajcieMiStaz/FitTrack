@@ -35,14 +35,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         <Box
           sx={{
-            alignItems: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             marginLeft: {
               xs: "2vw",
               sm: "3vw",
               md: "4vw",
               lg: "40px",
             },
-            marginTop: "35px",
           }}
         >
           <Logo />
