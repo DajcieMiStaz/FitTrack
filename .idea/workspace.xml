@@ -5,18 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9570b07b-40a3-4428-a8f6-2432039b4d54" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/services/frontend/src/components/AccountButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/components/AccountButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/src/components/BottomNavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/components/BottomNavBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/frontend/src/components/BarcodeScannerComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/src/components/LeftNavBarButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/components/LeftNavBarButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/src/components/LightDarkModeButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/components/LightDarkModeButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/src/components/Logocomponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/components/Logocomponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/src/theme/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/theme/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -46,25 +54,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;layout&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev:frontend.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Roman\\WebstormProjects\\FitTrack\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "layout",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev:frontend.executor": "Run",
+    "npm.frontend > dev.executor": "Run",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "C:\\Users\\Roman\\WebstormProjects\\FitTrack\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Roman\WebstormProjects\FitTrack\services\frontend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.frontend &gt; dev">
     <configuration name="dev:frontend" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -75,8 +90,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="frontend &gt; dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/services/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.frontend &gt; dev" />
         <item itemvalue="npm.dev:frontend" />
       </list>
     </recent_temporary>
@@ -98,11 +124,22 @@
       <updated>1761261255929</updated>
       <workItem from="1761261257062" duration="963000" />
       <workItem from="1761263283186" duration="1925000" />
-      <workItem from="1761315855569" duration="951000" />
+      <workItem from="1761315855569" duration="8962000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

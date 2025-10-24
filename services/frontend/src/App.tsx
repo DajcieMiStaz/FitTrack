@@ -6,6 +6,8 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+// import BarcodeScannerComponent from "./components/BarcodeScannerComponent.tsx";
+
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
       <ThemeProviderWrapper>
         <Layout>
           <Box>
-            
+              {/*<BarcodeScannerComponent/>*/}
           </Box>
         </Layout>
       </ThemeProviderWrapper>
