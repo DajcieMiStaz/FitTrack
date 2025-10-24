@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9570b07b-40a3-4428-a8f6-2432039b4d54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/frontend/src/components/BarcodeScannerComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/src/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/frontend/vite.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/frontend/src/Pages/Calories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/frontend/src/Pages/Home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -124,7 +119,7 @@
       <updated>1761261255929</updated>
       <workItem from="1761261257062" duration="963000" />
       <workItem from="1761263283186" duration="1925000" />
-      <workItem from="1761315855569" duration="8962000" />
+      <workItem from="1761315855569" duration="9269000" />
     </task>
     <servers />
   </component>
