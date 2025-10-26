@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import TodaysNutrition from "../components/Home/TodaysNutrition";
 import QuickActions from "../components/Home/QuickActionsPanel";
+import ProgressPanel from "../components/Home/ProgressPanel";
 
 export default function Home() {
   return (
@@ -31,14 +32,14 @@ export default function Home() {
           </Typography>
         </Box>
       </Box>
+      <ProgressPanel />
       <TodaysNutrition 
-      currentCalories={900} goalCalories={1000} 
+      currentCalories={500} goalCalories={1000} 
       currentProtein={50} goalProtein={100} 
       currentFat={30} goalFat={70} 
       currentCarbs={100} goalCarbs={200} 
       />
-      <QuickActions />
-      <Box sx={{ backgroundColor: "yellow" }}></Box>
+      <QuickActions /> 
     </>
   );
 }

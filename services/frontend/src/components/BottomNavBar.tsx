@@ -5,8 +5,8 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import BarChartIcon from '@mui/icons-material/BarChart';
 import PersonIcon from '@mui/icons-material/Person';
+import ScaleIcon from '@mui/icons-material/Scale';
 
 export default function BottomNavBar() {
   const [value, setValue] = React.useState(0);
@@ -23,7 +23,7 @@ export default function BottomNavBar() {
         <BottomNavigationAction label="Home" icon={<HomeIcon />} />
         <BottomNavigationAction label="Calories" icon={<RestaurantIcon />} />
         <BottomNavigationAction label="Exercises" icon={<FitnessCenterIcon />} />
-        <BottomNavigationAction label="Statistics" icon={<BarChartIcon />} />
+        <BottomNavigationAction label="Measurements" icon={<ScaleIcon />} />
         <BottomNavigationAction label="Account" icon={<PersonIcon />} />
       </BottomNavigation>
     </Box>

@@ -11,6 +11,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import AccountButton from "./AccountButton";
 import LightDarkModeButton from "./LightDarkModeButton";
 import { useThemeMode } from "../theme/ThemeProviderWrapper";
+import GroupsIcon from '@mui/icons-material/Groups';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const { mode, toggleTheme } = useThemeMode();
@@ -114,10 +115,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             onClick={() => setActiveButton("Statistics")}
           />
           <LeftNavBarButton
-            icon={<PersonIcon />}
-            label="Account"
-            isActive={activeButton === "Account"}
-            onClick={() => setActiveButton("Account")}
+            icon={<GroupsIcon />}
+            label="Trainees"
+            isActive={activeButton === "Trainees"}
+            onClick={() => setActiveButton("Trainees")}
           />
         </Box>
         <Box
@@ -151,6 +152,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           display: { xs: "block", md: "none" },
           borderTop: 1,
           borderColor: "divider",
+          position: "fixed",
+          bottom: 0,
         }}
       >
         <BottomNavBar />
