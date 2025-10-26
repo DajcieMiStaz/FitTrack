@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
+import TodaysNutrition from "../components/Home/TodaysNutrition";
+import QuickActions from "../components/Home/QuickActionsPanel";
 
 export default function Home() {
   return (
@@ -29,16 +31,13 @@ export default function Home() {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{ height: "200px", width: "100%" }}>
-        <Box
-          sx={{
-            height: "100%",
-            border: "1px solid",
-            borderRadius: "8px",
-            borderColor: "divider",
-          }}
-        ></Box>
-      </Box>
+      <TodaysNutrition 
+      currentCalories={900} goalCalories={1000} 
+      currentProtein={50} goalProtein={100} 
+      currentFat={30} goalFat={70} 
+      currentCarbs={100} goalCarbs={200} 
+      />
+      <QuickActions />
       <Box sx={{ backgroundColor: "yellow" }}></Box>
     </>
   );

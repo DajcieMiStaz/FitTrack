@@ -149,6 +149,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           height: "10%",
           width: "100%",
           display: { xs: "block", md: "none" },
+          borderTop: 1,
+          borderColor: "divider",
         }}
       >
         <BottomNavBar />
