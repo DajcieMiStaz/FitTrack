@@ -1,34 +1,34 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import { styled } from '@mui/material/styles';
-
-
+import * as React from "react";
+import Box from "@mui/material/Box";
+import LinearProgress, {
+  linearProgressClasses,
+} from "@mui/material/LinearProgress";
+import { styled } from "@mui/material/styles";
 
 const StyledLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 10,
+  height: 6,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: "secondary.main",
-    ...theme.applyStyles('dark', {
-      backgroundColor: "secondary.main",
+    backgroundColor: theme.palette.secondary.main,
+    ...theme.applyStyles("dark", {
+      backgroundColor: theme.palette.secondary.main,
     }),
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
-    backgroundColor: 'primary.main',
-    ...theme.applyStyles('dark', {
-      backgroundColor: 'primary.main',
+    backgroundColor: theme.palette.primary.main,
+    ...theme.applyStyles("dark", {
+      backgroundColor: theme.palette.primary.main,
     }),
   },
 }));
 
 type Props = {
-    currentValue?: number;
-    goalValue?: number;
+  currentValue?: number;
+  goalValue?: number;
 };
 
-export default function ProgressBar({currentValue, goalValue}: Props) {
+export default function ProgressBar({ currentValue, goalValue }: Props) {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
@@ -38,7 +38,7 @@ export default function ProgressBar({currentValue, goalValue}: Props) {
   }, [currentValue, goalValue]);
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: "100%" }}>
       <StyledLinearProgress variant="determinate" value={progress} />
     </Box>
   );

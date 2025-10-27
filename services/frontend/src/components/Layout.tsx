@@ -7,11 +7,10 @@ import HomeIcon from "@mui/icons-material/Home";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import BarChartIcon from "@mui/icons-material/BarChart";
-import PersonIcon from "@mui/icons-material/Person";
 import AccountButton from "./AccountButton";
 import LightDarkModeButton from "./LightDarkModeButton";
 import { useThemeMode } from "../theme/ThemeProviderWrapper";
-import GroupsIcon from '@mui/icons-material/Groups';
+import GroupsIcon from "@mui/icons-material/Groups";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const { mode, toggleTheme } = useThemeMode();
@@ -131,7 +130,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             justifyContent: "center",
           }}
         >
-          <Box id="ContentInnerPanel"
+          <Box
+            id="ContentInnerPanel"
             sx={{
               height: "100%",
               width: "85%",

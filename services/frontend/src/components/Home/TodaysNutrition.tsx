@@ -2,18 +2,7 @@ import { Box, Typography } from "@mui/material";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import ProgressBar from "./ProgressBar";
 
-type Props = {
-  currentCalories: number;
-  goalCalories: number;
-  currentProtein: number;
-  goalProtein: number;
-  currentFat: number;
-  goalFat: number;
-  currentCarbs: number;
-  goalCarbs: number;
-};
-
-export default function TodaysNutrition(props: Props) {
+export default function TodaysNutrition() {
   return (
     <Box
       id="nutritionCard"
@@ -92,7 +81,7 @@ export default function TodaysNutrition(props: Props) {
                 fontSize: "14px",
               }}
             >
-              {props.currentCalories}kcal/{props.goalCalories}kcal
+              {900}kcal/{1200}kcal
             </Typography>
           </Box>
           <Box
@@ -103,10 +92,7 @@ export default function TodaysNutrition(props: Props) {
               alignItems: "center",
             }}
           >
-            <ProgressBar
-              currentValue={props.currentCalories}
-              goalValue={props.goalCalories}
-            />
+            <ProgressBar currentValue={900} goalValue={1200} />
           </Box>
         </Box>
         <Box
@@ -156,7 +142,7 @@ export default function TodaysNutrition(props: Props) {
               }}
             >
               <Typography sx={{ color: "tertiary.main", fontSize: "13px" }}>
-                {props.currentProtein}g/{props.goalProtein}g
+                {120}g/{150}g
               </Typography>
             </Box>
             <Box
@@ -168,10 +154,7 @@ export default function TodaysNutrition(props: Props) {
                 alignItems: "center",
               }}
             >
-              <ProgressBar
-                currentValue={props.currentProtein}
-                goalValue={props.goalProtein}
-              />
+              <ProgressBar currentValue={120} goalValue={150} />
             </Box>
           </Box>
           <Box
@@ -211,7 +194,7 @@ export default function TodaysNutrition(props: Props) {
               }}
             >
               <Typography sx={{ color: "tertiary.main", fontSize: "13px" }}>
-                {props.currentProtein}g/{props.goalProtein}g
+                {150}g/{250}g
               </Typography>
             </Box>
             <Box
@@ -223,10 +206,7 @@ export default function TodaysNutrition(props: Props) {
                 alignItems: "center",
               }}
             >
-              <ProgressBar
-                currentValue={props.currentProtein}
-                goalValue={props.goalProtein}
-              />
+              <ProgressBar currentValue={150} goalValue={250} />
             </Box>
           </Box>
           <Box
@@ -266,7 +246,7 @@ export default function TodaysNutrition(props: Props) {
               }}
             >
               <Typography sx={{ color: "tertiary.main", fontSize: "13px" }}>
-                {props.currentProtein}g/{props.goalProtein}g
+                {90}g/{110}g
               </Typography>
             </Box>
             <Box
@@ -278,10 +258,7 @@ export default function TodaysNutrition(props: Props) {
                 alignItems: "center",
               }}
             >
-              <ProgressBar
-                currentValue={props.currentProtein}
-                goalValue={props.goalProtein}
-              />
+              <ProgressBar currentValue={90} goalValue={110} />
             </Box>
           </Box>
         </Box>

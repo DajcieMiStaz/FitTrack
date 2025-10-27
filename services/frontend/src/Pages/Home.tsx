@@ -3,11 +3,12 @@ import { Typography } from "@mui/material";
 import TodaysNutrition from "../components/Home/TodaysNutrition";
 import QuickActions from "../components/Home/QuickActionsPanel";
 import ProgressPanel from "../components/Home/ProgressPanel";
+import TodaysWorkoutPanel from "../components/Home/TodaysWorkoutPanel";
 
 export default function Home() {
   return (
-    <>
-      <Box id="header" sx={{ height: "150px", width: "100%" }}>
+    <Box sx={{display:"flex", flexDirection:"column", gap:{xs:"10px", md:"25px"} }}>
+      <Box id="header" sx={{ height:{xs:"100px", md:"150px"}, width: "100%"}}>
         <Box
           sx={{
             display: "flex",
@@ -33,13 +34,9 @@ export default function Home() {
         </Box>
       </Box>
       <ProgressPanel />
-      <TodaysNutrition 
-      currentCalories={500} goalCalories={1000} 
-      currentProtein={50} goalProtein={100} 
-      currentFat={30} goalFat={70} 
-      currentCarbs={100} goalCarbs={200} 
-      />
-      <QuickActions /> 
-    </>
+      <TodaysNutrition />
+      <QuickActions />
+      <TodaysWorkoutPanel  />
+    </Box>
   );
 }
