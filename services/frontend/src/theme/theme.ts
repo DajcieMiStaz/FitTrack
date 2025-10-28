@@ -5,9 +5,11 @@ import type { Theme } from '@mui/material/styles';
 declare module '@mui/material/styles' {
   interface Palette {
     tertiary?: Palette['primary'];
+    quarternary?: Palette['primary'];
   }
   interface PaletteOptions {
     tertiary?: PaletteOptions['primary'];
+    quarternary?: PaletteOptions['primary'];
   }
 }
 
@@ -25,6 +27,10 @@ export const lightTheme: Theme = createTheme({
     },
     tertiary: {
       main: '#6c6f6a',
+      contrastText: '#FFFFFF',
+    },
+    quarternary: {
+      main: '#dff9e4',
       contrastText: '#FFFFFF',
     },
     error: {
@@ -60,6 +66,10 @@ export const darkTheme: Theme = createTheme({
     },
     tertiary: {
       main: '#FFFFFF',
+      contrastText: '#FFFFFF',
+    },
+    quarternary: {
+      main: '#C1C9C0',
       contrastText: '#FFFFFF',
     },
     error: {

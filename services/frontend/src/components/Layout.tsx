@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Logo from "./Logocomponent";
 import BottomNavBar from "./BottomNavBar";
@@ -7,141 +7,157 @@ import HomeIcon from "@mui/icons-material/Home";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import BarChartIcon from "@mui/icons-material/BarChart";
-import PersonIcon from "@mui/icons-material/Person";
 import AccountButton from "./AccountButton";
 import LightDarkModeButton from "./LightDarkModeButton";
-import {useThemeMode} from "../theme/ThemeProviderWrapper";
+import { useThemeMode } from "../theme/ThemeProviderWrapper";
+import GroupsIcon from "@mui/icons-material/Groups";
 
-export default function Layout({children}: { children: React.ReactNode }) {
-    const {mode, toggleTheme} = useThemeMode();
-    const [activeButton, setActiveButton] = useState("Home");
-    return (
+export default function Layout({ children }: { children: React.ReactNode }) {
+  const { mode, toggleTheme } = useThemeMode();
+  const [activeButton, setActiveButton] = useState("Home");
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: { xs: "100dvh", md: "100vh" },
+        width: "100vw",
+      }}
+    >
+      <Box
+        id="toppanel"
+        sx={{
+          borderBottom: 1,
+          borderColor: "divider",
+          width: "100%",
+          height: "10%",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
         <Box
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                height: "100dvh",
-                width: "100dvw"
-            }}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginLeft: {
+              xs: "2vw",
+              sm: "3vw",
+              md: "4vw",
+              lg: "40px",
+            },
+          }}
         >
-            <Box
-                id="toppanel"
-                sx={{
-                    borderBottom: 1,
-                    borderColor: "divider",
-                    width: "100%",
-                    height: "10%",
-                    display: "flex",
-                    justifyContent: "space-between",
-                }}
-            >
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginLeft: {
-                            xs: "2vw",
-                            sm: "3vw",
-                            md: "4vw",
-                            lg: "40px",
-                        },
-                    }}
-                >
-                    <Logo/>
-                </Box>
-                <Box
-                    sx={{
-                        display: "flex",
-                        flexDirection: "row",
-                        alignItems: "space-between",
-                        marginRight: "30px",
-                        gap: "10px",
-                    }}
-                >
-                    <AccountButton name="User"/>
-                    <LightDarkModeButton mode={mode} toggleMode={toggleTheme}/>
-                </Box>
-            </Box>
-            <Box
-                id="mainPanel"
-                sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    height: "100%",
-                    width: "100%",
-                }}
-            >
-                <Box
-                    id="leftNavBar"
-                    sx={{
-                        width: "300px",
-                        display: {
-                            xs: "none",
-                            md: "flex",
-                        },
-                        flexDirection: "column",
-                        justifyContent: "flex-start",
-                        alignItems: "center",
-                        gap: "20px",
-                        paddingTop: "20px",
-                        borderRight: 1,
-                        borderColor: "divider",
-                    }}
-                >
-                    <LeftNavBarButton
-                        icon={<HomeIcon/>}
-                        label="Home"
-                        isActive={activeButton === "Home"}
-                        onClick={() => setActiveButton("Home")}
-                    />
-                    <LeftNavBarButton
-                        icon={<RestaurantIcon/>}
-                        label="Calories"
-                        isActive={activeButton === "Calories"}
-                        onClick={() => setActiveButton("Calories")}
-                    />
-                    <LeftNavBarButton
-                        icon={<FitnessCenterIcon/>}
-                        label="Exercises"
-                        isActive={activeButton === "Exercises"}
-                        onClick={() => setActiveButton("Exercises")}
-                    />
-                    <LeftNavBarButton
-                        icon={<BarChartIcon/>}
-                        label="Statistics"
-                        isActive={activeButton === "Statistics"}
-                        onClick={() => setActiveButton("Statistics")}
-                    />
-                    <LeftNavBarButton
-                        icon={<PersonIcon/>}
-                        label="Account"
-                        isActive={activeButton === "Account"}
-                        onClick={() => setActiveButton("Account")}
-                    />
-                </Box>
-                <Box
-                    id="contentPanel"
-                    sx={{
-                        backgroundColor: "background.main",
-                        height: "100%",
-                        width: "100%",
-                    }}
-                >
-                    {children}
-                </Box>
-            </Box>
-            <Box
-                id="bottomNavBar"
-                sx={{
-                    backgroundColor: "blue",
-                    height: "10%",
-                    width: "100%",
-                    display: {xs: "block", md: "none"},
-                }}
-            >
-                <BottomNavBar/>
-            </Box>
+          <Logo />
         </Box>
-    );
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "space-between",
+            marginRight: "30px",
+            gap: "10px",
+          }}
+        >
+          <AccountButton name="User" />
+          <LightDarkModeButton mode={mode} toggleMode={toggleTheme} />
+        </Box>
+      </Box>
+      <Box
+        id="mainPanel"
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          height: "100%",
+          width: "100%",
+        }}
+      >
+        <Box
+          id="leftNavBar"
+          sx={{
+            width: "300px",
+            display: {
+              xs: "none",
+              md: "flex",
+            },
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            gap: "20px",
+            paddingTop: "20px",
+            borderRight: 1,
+            borderColor: "divider",
+          }}
+        >
+          <LeftNavBarButton
+            icon={<HomeIcon />}
+            label="Home"
+            isActive={activeButton === "Home"}
+            onClick={() => setActiveButton("Home")}
+          />
+          <LeftNavBarButton
+            icon={<RestaurantIcon />}
+            label="Calories"
+            isActive={activeButton === "Calories"}
+            onClick={() => setActiveButton("Calories")}
+          />
+          <LeftNavBarButton
+            icon={<FitnessCenterIcon />}
+            label="Exercises"
+            isActive={activeButton === "Exercises"}
+            onClick={() => setActiveButton("Exercises")}
+          />
+          <LeftNavBarButton
+            icon={<BarChartIcon />}
+            label="Statistics"
+            isActive={activeButton === "Statistics"}
+            onClick={() => setActiveButton("Statistics")}
+          />
+          <LeftNavBarButton
+            icon={<GroupsIcon />}
+            label="Trainees"
+            isActive={activeButton === "Trainees"}
+            onClick={() => setActiveButton("Trainees")}
+          />
+        </Box>
+        <Box
+          id="contentPanel"
+          sx={{
+            backgroundColor: "background.main",
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Box
+            id="ContentInnerPanel"
+            sx={{
+              height: "100%",
+              width: "85%",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            {children}
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        id="bottomNavBar"
+        sx={{
+          backgroundColor: "blue",
+          height: "10%",
+          width: "100%",
+          display: { xs: "block", md: "none" },
+          borderTop: 1,
+          borderColor: "divider",
+          position: "fixed",
+          bottom: 0,
+        }}
+      >
+        <BottomNavBar />
+      </Box>
+    </Box>
+  );
 }

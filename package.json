@@ -15,7 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "@fontsource/roboto": "^5.2.8",
+    "@mui/x-date-pickers": "^8.15.0",
     "@thewirv/react-barcode-scanner": "^3.4.0",
+    "dayjs": "^1.11.18",
     "react-barcode-scanner": "^4.0.0",
     "react-router-dom": "^7.9.4"
   },

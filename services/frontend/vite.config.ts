@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true,
+    host: false,
     // https: {
     //   key: fs.readFileSync('./certs/key.pem'),
     //   cert: fs.readFileSync('./certs/cert.pem'),

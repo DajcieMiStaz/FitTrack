@@ -6,6 +6,9 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+// import BarcodeScannerComponent from "./components/BarcodeScannerComponent.tsx";
+import Home from "./Pages/Home.tsx";
+
 
 function App() {
   return (
@@ -13,7 +16,7 @@ function App() {
       <ThemeProviderWrapper>
         <Layout>
           <Box>
-              Content
+              <Home/>
           </Box>
         </Layout>
       </ThemeProviderWrapper>
