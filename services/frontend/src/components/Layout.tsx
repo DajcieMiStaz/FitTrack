@@ -20,8 +20,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: { xs: "100dvh", md: "100vh" },
-        width: "100vw",
+        height: "100%",
+        width: "100%",
       }}
     >
       <Box
@@ -70,6 +70,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           flexDirection: "row",
           height: "100%",
           width: "100%",
+          marginBottom: {xs: "25%", md: "0px"}
         }}
       >
         <Box
