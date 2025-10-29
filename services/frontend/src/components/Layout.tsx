@@ -20,8 +20,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: "100%",
+            height: "100vh",
         width: "100%",
+            overflow: "hidden"
       }}
     >
       <Box
@@ -30,9 +31,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           borderBottom: 1,
           borderColor: "divider",
           width: "100%",
-          height: "10%",
+          height: "70px",
+                flexShrink: "0",
           display: "flex",
           justifyContent: "space-between",
+                position: "sticky", // or fixed if you prefer
+                top: 0,
+                backgroundColor: "background.paper",
+                zIndex: 10,
         }}
       >
         <Box
@@ -67,27 +73,26 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         id="mainPanel"
         sx={{
           display: "flex",
-          flexDirection: "row",
-          height: "100%",
-          width: "100%",
-          marginBottom: {xs: "25%", md: "0px"}
+          flex: "1",
+          overflow: "hidden",
+            paddingBottom: {xs: "100px", md: "0px"}
+          // marginBottom: {xs: "13%", md: "0px"}
         }}
       >
         <Box
           id="leftNavBar"
           sx={{
-            width: "300px",
-            display: {
-              xs: "none",
-              md: "flex",
-            },
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "center",
-            gap: "20px",
-            paddingTop: "20px",
-            borderRight: 1,
-            borderColor: "divider",
+              width: "200px",
+              display: { xs: "none", md: "flex" },
+              flexDirection: "column",
+              alignItems: "left",
+              marginLeft: "20px",
+              gap: "20px",
+              paddingTop: "20px",
+              borderRight: "1",
+              borderColor: "divider",
+              backgroundColor: "background.paper",
+              flexShrink: "0"
           }}
         >
           <LeftNavBarButton
@@ -124,20 +129,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Box
           id="contentPanel"
           sx={{
-            backgroundColor: "background.main",
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
+              flex: 1,
+              overflowY: "auto",
+              backgroundColor: "background.default",
+              display: "flex",
+              justifyContent: "center",
           }}
         >
           <Box
             id="ContentInnerPanel"
             sx={{
-              height: "100%",
-              width: "85%",
-              display: "flex",
-              flexDirection: "column",
+                width: "85%",
+                display: "flex",
+                flexDirection: "column",
             }}
           >
             {children}
@@ -147,9 +151,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Box
         id="bottomNavBar"
         sx={{
-          backgroundColor: "blue",
-          height: "10%",
-          width: "100%",
+          height: "100px",
+          width: "100dvw",
           display: { xs: "block", md: "none" },
           borderTop: 1,
           borderColor: "divider",
