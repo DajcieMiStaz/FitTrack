@@ -20,9 +20,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       sx={{
         display: "flex",
         flexDirection: "column",
-            height: "100vh",
+        height: "100vh",
         width: "100%",
-            overflow: "hidden"
+        overflow: "hidden"
       }}
     >
       <Box
@@ -32,13 +32,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           borderColor: "divider",
           width: "100%",
           height: "70px",
-                flexShrink: "0",
+          flexShrink: "0",
           display: "flex",
           justifyContent: "space-between",
-                position: "sticky", // or fixed if you prefer
-                top: 0,
-                backgroundColor: "background.paper",
-                zIndex: 10,
+          position: "sticky",
+          top: 0,
+          backgroundColor: "background.paper",
+          zIndex: 10,
         }}
       >
         <Box
@@ -75,21 +75,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           display: "flex",
           flex: "1",
           overflow: "hidden",
-            paddingBottom: {xs: "100px", md: "0px"}
-          // marginBottom: {xs: "13%", md: "0px"}
+          paddingBottom: {xs: "100px", md: "0px"}
         }}
       >
         <Box
           id="leftNavBar"
           sx={{
-              width: "200px",
+              width: "220px",
               display: { xs: "none", md: "flex" },
               flexDirection: "column",
               alignItems: "left",
               marginLeft: "20px",
               gap: "20px",
               paddingTop: "20px",
-              borderRight: "1",
+              borderRight: "1px solid",
               borderColor: "divider",
               backgroundColor: "background.paper",
               flexShrink: "0"
