@@ -6,10 +6,12 @@ declare module '@mui/material/styles' {
   interface Palette {
     tertiary?: Palette['primary'];
     quarternary?: Palette['primary'];
+    workoutpanel?: Palette['primary'];
   }
   interface PaletteOptions {
     tertiary?: PaletteOptions['primary'];
     quarternary?: PaletteOptions['primary'];
+    workoutpanel?: PaletteOptions['primary'];
   }
 }
 
@@ -32,6 +34,10 @@ export const lightTheme: Theme = createTheme({
     quarternary: {
       main: '#dff9e4',
       contrastText: '#FFFFFF',
+    },
+    workoutpanel: {
+      main: '#d9f1e1',
+      contrastText: '#1A1C1A',
     },
     error: {
       main: '#BA1A1A',
