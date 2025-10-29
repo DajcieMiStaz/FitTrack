@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import Logo from "./Logocomponent";
-import BottomNavBar from "./BottomNavBar";
-import LeftNavBarButton from "./LeftNavBarButton";
+import Logo from "./Layout/Logocomponent.tsx";
+import BottomNavBar from "./Layout/BottomNavBar";
+import LeftNavBarButton from "./Layout/LeftNavBarButton";
 import HomeIcon from "@mui/icons-material/Home";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import BarChartIcon from "@mui/icons-material/BarChart";
-import AccountButton from "./AccountButton";
-import LightDarkModeButton from "./LightDarkModeButton";
+import AccountButton from "./Layout/AccountButton";
+import LightDarkModeButton from "./Layout/LightDarkModeButton";
 import { useThemeMode } from "../theme/ThemeProviderWrapper";
 import GroupsIcon from "@mui/icons-material/Groups";
 
