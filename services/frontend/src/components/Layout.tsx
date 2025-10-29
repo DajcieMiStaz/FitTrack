@@ -75,7 +75,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           display: "flex",
           flex: "1",
           overflow: "hidden",
-          paddingBottom: {xs: "100px", md: "0px"}
+          paddingBottom: {xs: "70px", md: "0px"}
         }}
       >
         <Box
@@ -150,7 +150,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Box
         id="bottomNavBar"
         sx={{
-          height: "100px",
+          height: "70px",
           width: "100dvw",
           display: { xs: "block", md: "none" },
           borderTop: 1,

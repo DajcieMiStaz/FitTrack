@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import ScaleIcon from "@mui/icons-material/Scale";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../ProgressBar.tsx";
 
 export default function ProgressPanel() {
   return (

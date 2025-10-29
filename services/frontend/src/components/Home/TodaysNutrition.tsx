@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../ProgressBar.tsx";
 
 export default function TodaysNutrition() {
   return (
