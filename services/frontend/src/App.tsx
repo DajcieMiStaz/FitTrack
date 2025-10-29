@@ -16,7 +16,7 @@ function App() {
       <ThemeProviderWrapper>
         <Layout>
           <Box>
-              <Home/>
+
           </Box>
         </Layout>
       </ThemeProviderWrapper>
