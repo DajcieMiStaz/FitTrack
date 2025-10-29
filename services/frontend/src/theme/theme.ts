@@ -1,5 +1,5 @@
-import type {Theme} from '@mui/material/styles';
 import {createTheme} from '@mui/material/styles';
+
 
 declare module '@mui/material/styles' {
     interface Palette {
@@ -13,7 +13,7 @@ declare module '@mui/material/styles' {
     }
 }
 
-export const lightTheme: Theme = createTheme({
+export const lightTheme = createTheme({
     palette: {
         mode: 'light',
         primary: {
@@ -49,9 +49,9 @@ export const lightTheme: Theme = createTheme({
     typography: {
         fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     },
-});
+} as ThemeOptions);
 
-export const darkTheme: Theme = createTheme({
+export const darkTheme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
@@ -84,4 +84,4 @@ export const darkTheme: Theme = createTheme({
         },
         divider: '#414942',
     },
-});
+} as ThemeOptions);

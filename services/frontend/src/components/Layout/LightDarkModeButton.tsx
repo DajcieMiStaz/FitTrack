@@ -10,16 +10,17 @@ type Props = {
 };
 
 
-export default function LightDarkModeButton({ mode, toggleMode }: Props) {
+export default function LightDarkModeButton({mode, toggleMode}: Props) {
 
-    const icon : React.ReactNode = (mode === 'light' ? <LightModeIcon sx={{fontSize:"20px"}} /> : <DarkModeIcon sx={{fontSize:"20px"}} />)
+    const icon: React.ReactNode = (mode === 'light' ? <LightModeIcon sx={{fontSize: "20px"}}/> :
+        <DarkModeIcon sx={{fontSize: "20px"}}/>)
 
     return (
-    <Box sx={{display: "flex", alignItems:"center"}}>
-      <IconButton aria-label= "toggle theme" onClick={toggleMode} sx={{height: "50px" , width: "50px"}}>
-        {icon}
-      </IconButton>
-    </Box>
+        <Box sx={{display: "flex", alignItems: "center"}}>
+            <IconButton aria-label="toggle theme" onClick={toggleMode} sx={{height: "50px", width: "50px"}}>
+                {icon}
+            </IconButton>
+        </Box>
     )
 }
 

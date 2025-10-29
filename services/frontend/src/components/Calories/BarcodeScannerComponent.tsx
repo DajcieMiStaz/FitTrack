@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {BarcodeScanner} from '@thewirv/react-barcode-scanner';
 
 export default function Test() {

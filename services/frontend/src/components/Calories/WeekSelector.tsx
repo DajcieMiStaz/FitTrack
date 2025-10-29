@@ -38,8 +38,13 @@ export default function WeekSelector({activeDate, today, setActiveDate}: Props) 
                 width: "100%",
                 border: "1px solid",
                 borderColor: "divider",
-                borderRadius: "8px",}}>
-                <Typography sx={{fontWeight: "bold", fontSize: "18px", paddingTop: "5px"}}>{daysOfWeek.at(0).format("MMMM")}</Typography>
+                borderRadius: "8px",
+            }}>
+                <Typography sx={{
+                    fontWeight: "bold",
+                    fontSize: "18px",
+                    paddingTop: "5px"
+                }}>{daysOfWeek.at(0).format("MMMM")}</Typography>
                 <Box
                     sx={{
                         display: "flex",
