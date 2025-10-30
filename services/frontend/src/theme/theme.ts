@@ -1,8 +1,8 @@
-import { createTheme } from '@mui/material/styles';
-import type { Theme } from '@mui/material/styles';
+import {createTheme} from '@mui/material/styles';
 
-// --- Extend MUI palette to support `tertiary`
+
 declare module '@mui/material/styles' {
+
   interface Palette {
     tertiary?: Palette['primary'];
     quarternary?: Palette['primary'];
@@ -15,18 +15,17 @@ declare module '@mui/material/styles' {
   }
 }
 
-// 🎨 Light theme
-export const lightTheme: Theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#006B30',
-      contrastText: '#FFFFFF',
-    },
-    secondary: {
-      main: '#659e7f',
-      contrastText: '#FFFFFF',
-    },
+export const lightTheme = createTheme({
+    palette: {
+        mode: 'light',
+        primary: {
+            main: '#006B30',
+            contrastText: '#FFFFFF',
+        },
+        secondary: {
+            main: '#659e7f',
+            contrastText: '#FFFFFF',
+        },
     tertiary: {
       main: '#6c6f6a',
       contrastText: '#FFFFFF',
@@ -58,39 +57,37 @@ export const lightTheme: Theme = createTheme({
   },
 });
 
-// 🌙 Dark theme
-export const darkTheme: Theme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#006B30',
-      contrastText: '#FFFFFF',
+export const darkTheme = createTheme({
+    palette: {
+        mode: 'dark',
+        primary: {
+            main: '#006B30',
+            contrastText: '#FFFFFF',
+        },
+        secondary: {
+            main: '#659e7f',
+            contrastText: '#FFFFFF',
+        },
+        tertiary: {
+            main: '#FFFFFF',
+            contrastText: '#FFFFFF',
+        },
+        quarternary: {
+            main: '#C1C9C0',
+            contrastText: '#FFFFFF',
+        },
+        error: {
+            main: '#FFB4AB',
+            contrastText: '#690005',
+        },
+        background: {
+            default: '#0c0c0cff',
+            paper: '#0c0c0cff',
+        },
+        text: {
+            primary: '#E3E3DF',
+            secondary: '#C1C9C0',
+        },
+        divider: '#414942',
     },
-    secondary: {
-      main: '#659e7f',
-      contrastText: '#FFFFFF',
-    },
-    tertiary: {
-      main: '#FFFFFF',
-      contrastText: '#FFFFFF',
-    },
-    quarternary: {
-      main: '#C1C9C0',
-      contrastText: '#FFFFFF',
-    },
-    error: {
-      main: '#FFB4AB',
-      contrastText: '#690005',
-    },
-    background: {
-      default: '#0c0c0cff',
-      paper: '#0c0c0cff',
-    },
-    text: {
-      primary: '#E3E3DF',
-      secondary: '#C1C9C0',
-    },
-    divider: '#414942',
-  },
-  
 });
