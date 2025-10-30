@@ -8,6 +8,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 // import BarcodeScannerComponent from "./components/BarcodeScannerComponent.tsx";
 import Calories from "./Pages/Calories.tsx";
+import Exercises from "./Pages/Exercises.tsx";
 
 function App() {
     return (
@@ -15,7 +16,7 @@ function App() {
             <ThemeProviderWrapper>
                 <Layout>
                     <Box>
-                        <Calories/>
+                        <Exercises />
                     </Box>
                 </Layout>
             </ThemeProviderWrapper>

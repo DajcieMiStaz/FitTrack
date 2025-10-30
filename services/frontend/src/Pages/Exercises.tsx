@@ -28,6 +28,14 @@ export default function Exercises() {
 
   const [selectedTab, setSelectedTab] = useState("today");
   const [exercises, setExercises] = useState(mockExercises);
+   const [open, setOpen] = useState(false);
+  
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+    const handleClose = () => {
+      setOpen(false);
+    };
 
   const HandleExerciseDelete = (id: number | string) => {
     const newExercises = exercises.filter((exercise) => exercise.id !== id);
@@ -63,7 +71,7 @@ export default function Exercises() {
       />
       {selectedTab === "today" ? (
         <>
-          <AddExerciseButton />
+          <AddExerciseButton open={open} handleOpen={handleClickOpen} handleClose={handleClose} />
           <Box sx={{display:"flex", flexDirection:"column", gap:"10px"}}>
           {exercises.map((exercise) => (
             <ExerciseAccordionComponent
