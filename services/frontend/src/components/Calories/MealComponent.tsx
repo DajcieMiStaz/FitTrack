@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import TuneIcon from '@mui/icons-material/Tune';
 import React from "react";
 
+
 type Props = {
     activeDate: Dayjs;
 }
@@ -54,6 +55,24 @@ function ChooseMealDialog(props: SimpleDialogProps) {
                 ))}
             </List>
         </Dialog>
+    );
+}
+
+function MealTab() {
+    return (
+        <Box sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "left",
+            height: {xs: "100px", md: "120px"},
+            width: "80%",
+            border: "1px solid",
+            borderColor: "divider",
+            borderRadius: "8px",
+            backgroundColor: "quarternary.main"
+        }}>
+
+        </Box>
     );
 }
 
@@ -124,6 +143,7 @@ export default function MealComponent({activeDate}: Props) {
                     selectedValue={selectedValue}
                     open={open}
                     onClose={handleClose}
+                    disableRestoreFocus
                 />
             </Box>
             <Box sx={{display: "flex", flexDirection: "column", gap: {xs: "10px", md: "15px"}, backgroundColor: "red"}}>

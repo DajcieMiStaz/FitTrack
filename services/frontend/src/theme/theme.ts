@@ -49,7 +49,7 @@ export const lightTheme = createTheme({
     typography: {
         fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     },
-} as ThemeOptions);
+});
 
 export const darkTheme = createTheme({
     palette: {
@@ -84,4 +84,4 @@ export const darkTheme = createTheme({
         },
         divider: '#414942',
     },
-} as ThemeOptions);
+});
