@@ -40,7 +40,7 @@ export default function ExerciseAccordionComponent({
   };
   return (
     <Box sx={{ display: "flex", flexDirection: "column"}}>
-      <Accordion>
+      <Accordion sx={{borderColor:"divider", borderWidth:"1px", borderStyle:"solid", boxShadow:"none"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"

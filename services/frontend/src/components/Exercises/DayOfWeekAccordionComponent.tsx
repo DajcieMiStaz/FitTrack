@@ -27,7 +27,7 @@ export default function DayOfWeekAccordionComponent({
 }: Props) {
   return (
     <Box>
-      <Accordion>
+      <Accordion sx={{borderColor:"divider", borderWidth:"1px", borderStyle:"solid", boxShadow:"none", "&:hover":{backgroundColor:"workoutpanel.main"}}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
@@ -49,19 +49,20 @@ export default function DayOfWeekAccordionComponent({
             >
               <Typography fontWeight="bold">{label}</Typography>
             </Box>
-            <Box sx={{display:"flex", flexDirection:"row"}}>
+            <Box sx={{display:"flex", flexDirection:"row" , justifyContent:"space-between", alignItems:"center", width:"100%" , paddingRight:"20px"}}>
               <Typography
                 sx={{ fontSize: "14px", display: "flex", alignItems: "center" }}
               >
                 {exercise.length} exercises
               </Typography>
-              <Box>
+              <Box sx={{display:"flex" , justifyContent:"flex-end"}}>
                 {addExerciseButton}
               </Box>
             </Box>
           </Box>
         </AccordionSummary>
         <AccordionDetails>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           {exercise.map((ex) => (
             <ExerciseAccordionComponent
               key={ex.id}
@@ -70,6 +71,7 @@ export default function DayOfWeekAccordionComponent({
               HandleExerciseDelete={() => HandleExerciseDelete(ex.id)}
             />
           ))}
+          </Box>
         </AccordionDetails>
       </Accordion>
     </Box>
