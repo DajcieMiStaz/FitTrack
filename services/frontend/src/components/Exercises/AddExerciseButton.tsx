@@ -8,27 +8,38 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import TextField from "@mui/material/TextField";
 
 type Props = {
   open: boolean;
   handleOpen: () => void;
   handleClose: () => void;
+  handleSave: (name: string) => void;
+  exerciseName: string;
+  setExerciseName: (s: string) => void;
+  buttonContent?: React.ReactNode;  // nowy prop
+  buttonProps?: any; // dodatkowe właściwości dla przycisku
 };
 
-
-
-export default function AddExerciseButton({ open, handleOpen, handleClose }: Props) {
-
-  const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
   },
-  '& .MuiDialogActions-root': {
+  "& .MuiDialogActions-root": {
     padding: theme.spacing(1),
   },
 }));
 
-
+export default function AddExerciseButton({
+  open,
+  handleOpen,
+  handleClose,
+  handleSave,
+  exerciseName,
+  setExerciseName,
+  buttonContent,
+  buttonProps
+}: Props) {
   return (
     <Box
       sx={{
@@ -39,30 +50,38 @@ export default function AddExerciseButton({ open, handleOpen, handleClose }: Pro
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        <Typography sx={{ fontSize: { xs: "16px", md: "20px" } }}>
-          Active Workout
-        </Typography>
-      </Box>
-      <Box sx={{ display: "flex", alignItems: "center" }}>
         <Button
           variant="contained"
           onClick={handleOpen}
           color="primary"
           startIcon={<AddIcon />}
+          {...buttonProps}
           sx={{
             fontSize: { xs: "0.8rem", md: "1rem" },
             padding: { xs: "4px 8px", md: "8px 16px" },
             borderRadius: "10px",
           }}
         >
-          Add Exercise
+           {buttonContent || "Add Exercise"}
         </Button>
         <BootstrapDialog
           aria-labelledby="customized-dialog-title"
           open={open}
+          onClose={(_, reason) => {
+            if (reason === "backdropClick" || reason === "escapeKeyDown")
+              return;
+            handleClose();
+          }}
+          fullWidth={true}
         >
-          <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+          <DialogTitle
+            sx={{ m: 0, p: 2, fontWeight: "bold" }}
+            id="customized-dialog-title"
+          >
             Add Exercise
+            <Typography sx={{ color: "quaternary.main" }}>
+              Add a new exercise to today's workout
+            </Typography>
           </DialogTitle>
           <IconButton
             aria-label="close"
@@ -77,10 +96,19 @@ export default function AddExerciseButton({ open, handleOpen, handleClose }: Pro
             <CloseIcon />
           </IconButton>
           <DialogContent dividers>
-            
+            <TextField
+              value={exerciseName}
+              onChange={(e) => setExerciseName(e.target.value)}
+              label="Exercise Name"
+              fullWidth
+            />
           </DialogContent>
           <DialogActions>
-            <Button autoFocus onClick={handleClose} variant="outlined">
+            <Button
+              autoFocus
+              onClick={() => handleSave(exerciseName)}
+              variant="contained"
+            >
               Save changes
             </Button>
           </DialogActions>

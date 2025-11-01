@@ -53,7 +53,7 @@ export default function SetComponent({ index , reps, weight, onDelete }: Props) 
               inputProps: { min: 0, max: 100, step: 1 },
               endAdornment: <InputAdornment position="end">kg</InputAdornment>,
               disableUnderline: true,
-              sx: { width: { xs: "50px", md: "60px" }, fontSize: "16px" },
+              sx: { width: { xs: "70px", md: "70px" }, fontSize: "16px" },
             },
           }}
         />
@@ -71,7 +71,7 @@ export default function SetComponent({ index , reps, weight, onDelete }: Props) 
               inputProps: { min: 0, max: 100, step: 1 },
               endAdornment: <InputAdornment position="end">kg</InputAdornment>,
               disableUnderline: true,
-              sx: { width: { xs: "50px", md: "60px" }, fontSize: "16px" },
+              sx: { width: { xs: "70px", md: "70px" }, fontSize: "16px" },
             },
           }}
         />

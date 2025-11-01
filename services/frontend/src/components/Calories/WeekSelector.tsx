@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from "react";
+import {useMemo, useState} from "react";
 import {Box, IconButton, Typography} from "@mui/material";
 import {ArrowBackIos, ArrowForwardIos} from "@mui/icons-material";
 import {Dayjs} from "dayjs";
@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 type Props = {
     activeDate: Dayjs;
     today: Dayjs;
-    setActiveDate: (day) => void;
+    setActiveDate: (day: Dayjs) => void;
 }
 
 export default function WeekSelector({activeDate, today, setActiveDate}: Props) {
@@ -44,7 +44,7 @@ export default function WeekSelector({activeDate, today, setActiveDate}: Props) 
                     fontWeight: "bold",
                     fontSize: "18px",
                     paddingTop: "5px"
-                }}>{daysOfWeek.at(0).format("MMMM")}</Typography>
+                }}>{daysOfWeek.at(0)?.format("MMMM")}</Typography>
                 <Box
                     sx={{
                         display: "flex",
